@@ -9,3 +9,16 @@ export default function() {
     </View>
   )
 }
+
+
+
+
+
+
+// flexDirection: Richtung der Hauptachse ('column' = vertikal, 'row' = horizontal)
+// justifyContent: Ausrichtung auf der Hauptachse ('center', 'space-between', ...)
+// alignItems: Ausrichtung auf der Querachse ('center', 'stretch', ...)
+// gap: Fester Abstand zwischen Kind-Elementen
+// padding: Innenabstand (Platz innerhalb der Box)
+// margin: Außenabstand (Abstand zu Nachbar-Boxen)
+// flex: 1: Füllt den gesamten verfügbaren Bildschirmplatz aus
