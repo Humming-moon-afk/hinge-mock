@@ -9,7 +9,7 @@ export default function() {
         <Text style = {{fontSize: 18}}>Designed to be deleted</Text>
       </View>
       <View style = {{paddingBottom: 240, alignItems: 'center', gap: 30}}>
-        <Text style = {{fontSize: 14}}>Konto erstellen</Text>
+        <Text style = {{fontSize: 14, backgroundColor: '#A689E1', paddingVertical:10, paddingHorizontal:10, borderRadius:30, width: '30%'}}>Konto erstellen</Text>
         <Text style = {{fontSize: 14}}>Anmelden</Text>
       </View>
     </View>
