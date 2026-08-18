@@ -12,7 +12,9 @@ export default function() {
         <TouchableOpacity style = {{paddingVertical: 10, paddingHorizontal:10, borderRadius:30, alignItems:'center', backgroundColor: '#A689E1', width: '35%'}}>
           <Text style = {{fontSize: 14, backgroundColor: '#A689E1', fontWeight: 'bold'}}>Konto erstellen</Text>
         </TouchableOpacity>
-        <Text style = {{fontSize: 14}}>Anmelden</Text>
+        <TouchableOpacity>
+          <Text style = {{fontSize: 14}}>Anmelden</Text>
+        </TouchableOpacity>
       </View>
     </View>
   )
