@@ -1,4 +1,4 @@
-import { Text, View } from 'react-native'
+import { Text, TouchableOpacity, View } from 'react-native'
 
 
 export default function() {
@@ -9,7 +9,9 @@ export default function() {
         <Text style = {{fontSize: 18}}>Designed to be deleted</Text>
       </View>
       <View style = {{paddingBottom: 240, alignItems: 'center', gap: 30}}>
-        <Text style = {{fontSize: 14, backgroundColor: '#A689E1', paddingVertical:10, paddingHorizontal:10, borderRadius:30, width: '30%'}}>Konto erstellen</Text>
+        <TouchableOpacity style = {{paddingVertical: 10, paddingHorizontal:10, borderRadius:30, alignItems:'center', backgroundColor: '#A689E1', width: '35%'}}>
+          <Text style = {{fontSize: 14, backgroundColor: '#A689E1', fontWeight: 'bold'}}>Konto erstellen</Text>
+        </TouchableOpacity>
         <Text style = {{fontSize: 14}}>Anmelden</Text>
       </View>
     </View>
