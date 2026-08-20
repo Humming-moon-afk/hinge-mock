@@ -8,7 +8,7 @@ export default function() {
     return(
         <View style = {{paddingTop: 300, alignItems: 'center', gap: 20}}> 
             <Text style = {{fontWeight: 'bold', fontSize: 18}}>Wie lautet deine Telefonnummer?</Text>
-            <TextInput value={number} onChangeText={setNumber}
+            <TextInput keyboardType="phone-pad" value={number} onChangeText={setNumber}
                 style= {{fontSize: 12,fontWeight:'bold', borderRadius: 30, backgroundColor:'lightgrey', width: '35%', paddingVertical: 10, paddingHorizontal:10}}
                 placeholder="Bitte eingeben..."
             />
