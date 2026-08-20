@@ -14,7 +14,7 @@ export default function() {
             />
             <TouchableOpacity style = {{paddingVertical: 15, paddingHorizontal:10, borderRadius:30, alignItems:'center', backgroundColor: '#A689E1', width: '40%'}}
             onPress={() => router.push({
-            pathname: '/register/adress',
+            pathname: '/register/address',
             params: {name, number}
             })}
             >
