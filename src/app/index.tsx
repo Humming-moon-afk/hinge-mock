@@ -1,7 +1,9 @@
+import { useRouter } from 'expo-router'
 import { Text, TouchableOpacity, View } from 'react-native'
 
 
 export default function() {
+  const router = useRouter()
   return(
     <View style = {{flex: 1, justifyContent: 'space-between'}}>
       <View style ={{paddingTop: 180, alignItems: 'center', gap: 20}}>
@@ -9,7 +11,7 @@ export default function() {
         <Text style = {{fontSize: 18}}>Designed to be deleted</Text>
       </View>
       <View style = {{paddingBottom: 240, alignItems: 'center', gap: 30}}>
-        <TouchableOpacity style = {{paddingVertical: 20, paddingHorizontal:10, borderRadius:30, alignItems:'center', backgroundColor: '#A689E1', width: '50%'}}>
+        <TouchableOpacity style = {{paddingVertical: 20, paddingHorizontal:10, borderRadius:30, alignItems:'center', backgroundColor: '#A689E1', width: '50%'}}onPress={() => router.push('/register/name')}>
           <Text style = {{fontSize: 14, backgroundColor: '#A689E1', fontWeight: 'bold'}}>Konto erstellen</Text>
         </TouchableOpacity>
         <TouchableOpacity>
