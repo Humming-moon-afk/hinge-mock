@@ -17,7 +17,8 @@ export default function() {
        alert('Konto erfolgreich erstellt')
        return result
         } catch(error) {
-
+            console.error('Fehler: ', error)
+            alert('Registrierung fehkgesclagen!')
         }
     }
     return(
