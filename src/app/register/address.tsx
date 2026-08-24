@@ -10,8 +10,12 @@ export default function() {
     async function configuration() {
         try {
             const options = { method: 'POST', headers: {'Content-Type': 'application/json'}, body: JSON.stringify({name: name, phoneNumber: number, address: adress})}
-       await fetch(URL, options)
+       const response = await fetch(URL, options)
+       response
+       const result = await response.json()
+       console.log('Server Antworet: ', result)
        alert('Konto erfolgreich erstellt')
+       return result
         } catch(error) {
 
         }
