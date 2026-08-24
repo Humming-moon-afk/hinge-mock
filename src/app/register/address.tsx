@@ -1,4 +1,4 @@
-import { useLocalSearchParams } from 'expo-router'
+import { useLocalSearchParams, useRouter } from 'expo-router'
 import { useState } from 'react'
 import { Text, TextInput, TouchableOpacity, View } from 'react-native'
 
@@ -6,7 +6,7 @@ export default function() {
     const { name, number} = useLocalSearchParams<{ name: string, number: string}>()
     const [adress, setAdress] = useState('')
     const URL = 'http://localhost:8080/api/users'
-    
+    const router = useRouter()
     async function configuration() {
         try {
             const options = { method: 'POST', headers: {'Content-Type': 'application/json'}, body: JSON.stringify({name: name, phoneNumber: number, address: adress})}
@@ -15,10 +15,13 @@ export default function() {
        const result = await response.json()
        console.log('Server Antworet: ', result)
        alert('Konto erfolgreich erstellt')
+       router.push({
+        pathname: '/preferences/dating', params: {userId: result.id}
+       })
        return result
         } catch(error) {
             console.error('Fehler: ', error)
-            alert('Registrierung fehkgesclagen!')
+            alert('Registrierung fehlgeschlagen!')
         }
     }
     return(
