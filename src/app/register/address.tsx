@@ -11,6 +11,7 @@ export default function() {
         try {
             const options = { method: 'POST', headers: {'Content-Type': 'application/json'}, body: JSON.stringify({name: name, phoneNumber: number, address: adress})}
        await fetch(URL, options)
+       alert('Konto erfolgreich erstellt')
         } catch(error) {
 
         }
