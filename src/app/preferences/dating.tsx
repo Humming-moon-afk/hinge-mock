@@ -39,6 +39,19 @@ export default function Dating() {
                     )
                 })}
             </View>
+            <TouchableOpacity disabled={!preference}
+            style = {{
+                width:'80%',
+                padding:15,
+                borderRadius: 20,
+                alignItems:'center',
+                backgroundColor: preference ? '#A689E1' : '#D1D1D1'
+            }}
+            >
+            <Text style={{ color: '#FFFFFF', fontWeight: 'bold' }}>
+                Weiter
+            </Text>
+            </TouchableOpacity>
         </View>
     )
 }
