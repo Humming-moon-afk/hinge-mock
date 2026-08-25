@@ -16,7 +16,8 @@ export default function() {
        console.log('Server Antworet: ', result)
        alert('Konto erfolgreich erstellt')
        router.push({
-        pathname: '/preferences/dating', params: {userId: result.id}
+        pathname: '/preferences/dating', 
+        params: {userId: result.id}
        })
        return result
         } catch(error) {
