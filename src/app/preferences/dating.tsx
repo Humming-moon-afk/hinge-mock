@@ -1,16 +1,23 @@
-import { useLocalSearchParams } from "expo-router"
+import { useLocalSearchParams, useRouter } from "expo-router"
 import { useState } from "react"
-import { Text, TouchableOpacity, View } from "react-native"
-export default function Dating() {
+import { Text, View } from "react-native"
+
+
+
+
+export default function dating(){
     const {userId} = useLocalSearchParams<{userId: string}>()
+    const preferences = ['Männlich', 'Weiblich', 'Beide']
     const [preference, setPreference] = useState('')
+    const router = useRouter()
     return(
-        <View style = {{alignItems: 'center', paddingTop: 300, gap: 20}}>
-            <Text style = {{fontSize: 18, fontWeight:'bold'}}>Dating Präferenzen</Text>
-            <Text style = {{fontSize:15, fontWeight:'light'}}>Welches Geschlecht bevorzugst du?</Text>
-            <TouchableOpacity>
-                
-            </TouchableOpacity>
+        <View style = {{alignItems:'center', gap:20, paddingTop: 200}}>
+            <Text style = {{fontWeight:'bold', fontSize:18}}>
+                Dating Präferenzen
+            </Text>
+            <Text style = {{fontWeight:'condensed', fontSize:15}}>
+                Wen möchtest du daten?
+            </Text>
         </View>
     )
 }
