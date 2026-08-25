@@ -25,6 +25,14 @@ export default function Dating() {
                         <TouchableOpacity 
                             key={item} 
                             onPress={() => setPreference(item)}
+                            style = {{
+                                padding: 15,
+                                borderRadius: 20,
+                                borderWidth: 1.5,
+                                alignItems:'center',
+                                borderColor: isSelected ? '#A689E1' : '#E0E0E0',
+                                backgroundColor: isSelected ? '#F3EEFF' : '#FFFFFF'
+                            }}
                         >
                             <Text>{item}</Text>
                         </TouchableOpacity>
