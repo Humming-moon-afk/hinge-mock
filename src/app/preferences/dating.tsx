@@ -39,7 +39,10 @@ export default function Dating() {
                     )
                 })}
             </View>
-            <TouchableOpacity disabled={!preference}
+            <TouchableOpacity disabled={!preference} onPress={() => router.push({
+                pathname: '/preferences/relationship',
+                params: {preference, userId}
+            })}
             style = {{
                 width:'80%',
                 padding:15,
